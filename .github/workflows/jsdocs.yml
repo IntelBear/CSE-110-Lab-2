@@ -24,4 +24,5 @@ jobs:
           output_dir: ./../Documentation
           recurse: true
       
-      - run: pwd
+      - run: ls
+      - run: ls ../
