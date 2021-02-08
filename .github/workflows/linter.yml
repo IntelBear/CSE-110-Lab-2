@@ -55,23 +55,7 @@ jobs:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          VALIDATE_ANSIBLE: false
-          VALIDATE_ARM: false
-          VALIDATE_BASH: false
-          VALIDATE_BASH_EXEC: false
-          VALIDATE_CLOJURE: false
-          VALIDATE_CLOUDFORMATION: false
-          VALIDATE_COFFEE: false
-          VALIDATE_CSHARP: false
-          VALIDATE_DART: false
-          VALIDATE_DOCKERFILE: false
-          VALIDATE_DOCKERFILE_HADOLINT: false
-          VALIDATE_EDITORCONFIG: false
-          VALIDATE_ENV: false
-          VALIDATE_GHERKIN: false
-          VALIDATE_GO: false
-          VALIDATE_GROOVY: false
-          VALIDATE_JAVA: false
-          VALIDATE_PYTHON_FLAKE8: false
-          VALIDATE_PYTHON_ISORT: false
-          VALIDATE_XML: false
+          VALIDATE_CSS: true
+          VALIDATE_HTML: true
+          VALIDATE_JAVASCRIPT_ES: true
+          FILTER_REGEX_EXCLUDE: .*/Documentation/.*
