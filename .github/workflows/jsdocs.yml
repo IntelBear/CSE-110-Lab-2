@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        run: npm install -g jsdoc
+        run: sudo npm install -g jsdoc
         
       - name: Make Docs
         uses: andstor/jsdoc-action@v1.2.0
