@@ -24,4 +24,6 @@ jobs:
           output_dir: ./Documentation
           recurse: true
       
-      - run: pwd
+      - run: |
+              cat ./Documentation/hi.js.html
+              ls ./Documentation
