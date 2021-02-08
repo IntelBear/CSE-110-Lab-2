@@ -17,4 +17,4 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1.2.0
         with:
-            jsdoc-path: './'
+            output_dir: ./out
