@@ -11,10 +11,10 @@ jobs:
   make-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v2
-        
-      - name: Make Docs
-        uses: brunokrauss/jsdoc-action@1
+
+      - name: Build
+        uses: andstor/jsdoc-action@v1.2.0
         with:
             jsdoc-path: './..'
