@@ -20,12 +20,12 @@ jobs:
       - name: Make Docs
         uses: andstor/jsdoc-action@v1.2.0
         with:
-          source_dir: ./../..
-          output_dir: ./../../Documentation
+          source_dir: ./..
+          output_dir: ./../Documentation
           recurse: true
 
       - name: Save Docs
         uses: actions/upload-artifact@v2
         with:
           name: Documentation
-          path: CSE-110-Lab2/Documentation
+          path: /home/runner/work/CSE-110-Lab-2/Documentation
