@@ -14,9 +14,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build
-        uses: andstor/jsdoc-action@v1.2.0
-        with:
-            source_dir: ./../
-            output_dir: ./out
-            recurse: true
+      - name: Install JSDocs
+        run: sudo npm install -g jsdoc
+
+      - name: Make Docs
+        run: jsdoc -r ./.. -d ./Documentation
