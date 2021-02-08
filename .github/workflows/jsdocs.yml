@@ -11,6 +11,8 @@ jobs:
   make-docs:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
         
       - name: Make Docs
         uses: brunokrauss/jsdoc-action@1
