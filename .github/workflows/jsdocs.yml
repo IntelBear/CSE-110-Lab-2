@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make Docs
-        uses: andstor/jsdoc-action@v1
+        uses: andstor/jsdoc-action@v1.2.0
         with:
           source_dir: ./..
           recurse: true
