@@ -10,9 +10,9 @@ on:
 jobs:
   make-docs:
     runs-on: ubuntu-latest
-
-    uses: andstor/jsdoc-action@v1
-    with:
-      source_dir: ../
-      recurse: true
-      output_dir: ./out
+    steps:
+      uses: andstor/jsdoc-action@v1
+      with:
+        source_dir: ../
+        recurse: true
+        output_dir: ./out
