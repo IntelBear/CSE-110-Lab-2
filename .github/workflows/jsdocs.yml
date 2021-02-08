@@ -20,7 +20,7 @@ jobs:
       - name: Make Docs
         uses: andstor/jsdoc-action@v1.2.0
         with:
-          source_dir: ./
+          source_dir: ./src
           output_dir: ./Documentation
           recurse: true
       
