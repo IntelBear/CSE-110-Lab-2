@@ -18,3 +18,11 @@ jobs:
 
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
+
+      - name: Print Abbrevs
+        run: |
+          echo LOC - Lines of Code
+          echo CLOC - Commented Lines of Code
+          echo CC - Cyclomatic Complexity
+          echo #methods - Number of Methods
+          echo #classes - Number of Classes
