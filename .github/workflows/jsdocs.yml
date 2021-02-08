@@ -11,8 +11,9 @@ jobs:
   make-docs:
     runs-on: ubuntu-latest
     steps:
-      uses: andstor/jsdoc-action@v1
-      with:
-        source_dir: ../
-        recurse: true
-        output_dir: ./out
+      - name: Make Docs
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ../
+          recurse: true
+          output_dir: ./out
