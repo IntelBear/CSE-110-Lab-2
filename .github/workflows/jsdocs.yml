@@ -22,7 +22,8 @@ jobs:
           recurse: true
       - name: Push changes to repo
         run: |
-
+          git config --global user.email "bryantshao@gmail.com"
+          git config --global user.name "IntelBear"
           git checkout main
           git add .
           git status
