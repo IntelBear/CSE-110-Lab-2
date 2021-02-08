@@ -23,3 +23,9 @@ jobs:
           source_dir: ./../..
           output_dir: ./../../Documentation
           recurse: true
+
+      - name: Save Docs
+        uses: actions/upload-artifact@v2
+        with:
+          name: Documentation
+          path: ./../../Documentation
