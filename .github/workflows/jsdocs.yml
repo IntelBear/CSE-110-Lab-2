@@ -18,4 +18,8 @@ jobs:
         run: sudo npm install -g jsdoc
 
       - name: Make Docs
-        run: jsdoc -r ./../.. -d ./../../Documentation
+        uses: andstor/jsdoc-action@v1.2.0
+        with:
+          source_dir: ./../..
+          output_dir: ./../../Documentation
+          recurse: true
