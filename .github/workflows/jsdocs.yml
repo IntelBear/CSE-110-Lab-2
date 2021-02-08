@@ -23,9 +23,5 @@ jobs:
           source_dir: ./..
           output_dir: ./../Documentation
           recurse: true
-
-      - name: Save Docs
-        uses: actions/upload-artifact@v2
-        with:
-          name: Documentation
-          path: /home/runner/work/CSE-110-Lab-2/Documentation
+      
+      - run: cat ./../Documentation/test_js_docs.js.html
