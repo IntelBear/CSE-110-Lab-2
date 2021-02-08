@@ -13,7 +13,6 @@ jobs:
     steps:
         
       - name: Make Docs
-        uses: andstor/jsdoc-action@v1.2.0
+        uses: brunokrauss/jsdoc-action@1
         with:
-          recurse: true
-          output_dir: ./out
+            jsdoc-path: './..'
