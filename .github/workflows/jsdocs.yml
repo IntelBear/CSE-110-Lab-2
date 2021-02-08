@@ -2,7 +2,7 @@ name: Make JSDocs
 on:
   push:
     branches: [main]
-  pull-request:
+  pull_request:
     branches: [main]
 
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
 jobs:
   make-docs:
     runs-on: ubuntu-latest
-    
+
     uses: andstor/jsdoc-action@v1
     with:
       source_dir: ../
