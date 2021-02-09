@@ -11,8 +11,10 @@ jobs:
   make-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout current branch
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }} 
 
       - name: Make Docs
         uses: andstor/jsdoc-action@v1.2.0
@@ -20,11 +22,12 @@ jobs:
           source_dir: ./src
           output_dir: ./Documentation
           recurse: true
+
       - name: Push changes to repo
         run: |
           git config --global user.email "bryantshao@gmail.com"
           git config --global user.name "IntelBear"
-          git checkout main
+          git checkout ${{ github.head_ref }}
           git add .
           git status
           git commit -am "Add new comment"
