@@ -1,4 +1,6 @@
-"scripts": {
-"test": "jest --",
-"coverage": "jest --collectCoverage --"
+{
+  "scripts": {
+  "test": "jest --",
+  "coverage": "jest --collectCoverage --"
+  }
 }
