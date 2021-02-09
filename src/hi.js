@@ -16,3 +16,12 @@ function doNothing (nothing){
 function hi (){
     return;
 }
+
+/**
+ * Returns
+ * @author IntelBear
+ * @returns void
+ */
+function bye (){
+    return;
+}
