@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install
-        run: npm i jest
+        run: yarn add --dev jest
       
       - name: Run Tests
         run: npm run test
