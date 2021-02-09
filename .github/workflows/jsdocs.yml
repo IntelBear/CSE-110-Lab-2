@@ -20,13 +20,12 @@ jobs:
           source_dir: ./src
           output_dir: ./Documentation
           recurse: true
-      - run: echo ${GITHUB_REF}
-      - run: echo ${GITHUB_WORKSPACE}
+
       - name: Push changes to repo
         run: |
           git config --global user.email "bryantshao@gmail.com"
           git config --global user.name "IntelBear"
-          git checkout main
+          git checkout ${{ github.head_ref }}
           git add .
           git status
           git commit -am "Add new comment"
