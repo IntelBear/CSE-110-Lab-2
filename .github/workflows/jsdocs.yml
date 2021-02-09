@@ -27,7 +27,6 @@ jobs:
         run: |
           git config --global user.email "bryantshao@gmail.com"
           git config --global user.name "IntelBear"
-          git checkout ${{ github.head_ref }}
           git add .
           git status
           git commit -am "Add new comment"
