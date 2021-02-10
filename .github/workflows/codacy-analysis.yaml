@@ -1,8 +1,8 @@
-name: build
+name: Code Climate
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - '!*' # Do not execute on tags
     paths:
