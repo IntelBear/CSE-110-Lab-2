@@ -19,7 +19,7 @@ jobs:
     - run: yarn add --dev jest
     - run: yarn install
     - run: yarn test
-    - run: jest --coverage
+    - run: yarn coverage
   #coverage:
   #  needs: [ test ]
   #  name: coverage
