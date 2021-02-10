@@ -19,7 +19,7 @@ jobs:
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
         with:
-          directory: ${{ github.ref }} + /src
+          directory: ${{ github.ref }} + '/srcbvhjvguv'
 
       - name: Print Abbrevs
         run: |
