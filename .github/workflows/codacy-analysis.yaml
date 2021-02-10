@@ -15,11 +15,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: echo ${{ github.ref }} + '/src'
+
       - name: Run Codacy Analysis CLI
         uses: codacy/codacy-analysis-cli-action@master
         with:
-          directory: ${{ github.ref }} + '/src'
+          directory: ${{ github.ref }}/src
 
       - name: Print Abbrevs
         run: |
