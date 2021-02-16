@@ -20,18 +20,11 @@ jobs:
         uses: andstor/jsdoc-action@v1.2.0
         with:
           source_dir: ./src
-          output_dir: ./Documentation
+          output_dir: ./JSDocumentation
           recurse: true
 
-      - name: Push changes to repo
-        run: |
-          git config --global user.email "bryantshao@gmail.com"
-          git config --global user.name "IntelBear"
-          git checkout ${{ github.head_ref }}
-          git add .
-          git status
-          git commit -am "Add new comment"
-          git push
-      - run: |
-              cat ./Documentation/hi.js.html
-              ls ./Documentation
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./JSDocumentation # The folder the action should deploy.
