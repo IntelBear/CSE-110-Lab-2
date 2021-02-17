@@ -6,7 +6,6 @@
  */
 function hi (parameter){
     console.log(parameter.length);
-    /** @type {string} */
     let easy = '123';
     parameter = 123;
     return;
