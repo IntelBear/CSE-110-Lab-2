@@ -26,3 +26,10 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: ./JSDocumentation # The folder the action should deploy.
+
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "./JSDocumentation"
+        env:
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
