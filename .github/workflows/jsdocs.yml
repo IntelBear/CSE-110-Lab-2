@@ -9,9 +9,16 @@ on:
 
 jobs:
   make-docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+      - name: Wait on tests
+        uses: lewagon/wait-on-check-action@master
+        with:
+          ref: ${{ github.ref }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+          running-workflow-name: 'make-docs'
+          
       - name: Checkout current branch
         uses: actions/checkout@v2
 
@@ -27,10 +34,3 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: ./JSDocumentation # The folder the action should deploy.
-
-      - name: Upload Documentation to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
-        with:
-          path: "./src"
-        env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
