@@ -6,8 +6,7 @@
  */
 function hi (parameter){
     console.log(parameter.length);
-    let easy = '123';
-    parameter = 123;
+    let easy = '123;
     return;
 }
 
