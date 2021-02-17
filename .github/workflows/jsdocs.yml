@@ -9,27 +9,28 @@ on:
 
 jobs:
   make-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout current branch
-        uses: actions/checkout@v2
+    - if: github.event.pull_request.merged == true
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout current branch
+          uses: actions/checkout@v2
 
-      - name: Make Docs
-        uses: andstor/jsdoc-action@v1.2.0
-        with:
-          source_dir: ./src
-          output_dir: ./JSDocumentation
-          recurse: true
+        - name: Make Docs
+          uses: andstor/jsdoc-action@v1.2.0
+          with:
+            source_dir: ./src
+            output_dir: ./JSDocumentation
+            recurse: true
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: ./JSDocumentation # The folder the action should deploy.
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@4.0.0
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: ./JSDocumentation # The folder the action should deploy.
 
-      - name: Upload Documentation to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
-        with:
-          path: "./src"
-        env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+        - name: Upload Documentation to Wiki
+          uses: SwiftDocOrg/github-wiki-publish-action@v1
+          with:
+            path: "./src"
+          env:
+            GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
