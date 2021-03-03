@@ -7,7 +7,7 @@
 function hi (parameter){
     console.log(parameter.length);
     let easy = '123';
-    parameter = 123;
+    easy = 123;
     return;
 }
 
