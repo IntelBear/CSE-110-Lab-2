@@ -9,6 +9,7 @@ function hi (parameter){
     let easy = '123';
     easy = 123;
     return;
+    console.log("Hi");
 }
 
 /**
